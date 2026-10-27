@@ -98,7 +98,7 @@ const bindTaskEvents = function (taskListItem, taskStatusHandler) {
 };
 
 const bindTaskListEvents = function (taskList, taskStatusHandler) {
-  for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
+  for (let i = 0; i < taskList.children.length; i++) {
     bindTaskEvents(taskList.children[i], taskStatusHandler);
   }
 };
