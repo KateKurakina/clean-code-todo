@@ -51,14 +51,14 @@ const toggleTaskEditMode = function () {
 
   const editInput = listItem.querySelector('input[type=text]');
   const label = listItem.querySelector('label');
-  const editBtn = listItem.querySelector('.edit');
+  const editButton = listItem.querySelector('.edit');
   const isEditMode = listItem.classList.contains('editMode');
   if (isEditMode) {
     label.innerText = editInput.value;
-    editBtn.innerText = 'Edit';
+    editButton.innerText = 'Edit';
   } else {
     editInput.value = label.innerText;
-    editBtn.innerText = 'Save';
+    editButton.innerText = 'Save';
   }
 
   listItem.classList.toggle('editMode');
