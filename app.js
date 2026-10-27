@@ -46,7 +46,7 @@ const addTask = function () {
   taskInput.value = '';
 };
 
-const editTask = function () {
+const toggleTaskEditMode = function () {
   const listItem = this.parentNode;
 
   const editInput = listItem.querySelector('input[type=text]');
@@ -92,7 +92,7 @@ const bindTaskEvents = function (taskListItem, taskStatusHandler) {
   const editButton = taskListItem.querySelector('button.edit');
   const deleteButton = taskListItem.querySelector('button.delete');
 
-  editButton.onclick = editTask;
+  editButton.onclick = toggleTaskEditMode;
   deleteButton.onclick = deleteTask;
   checkbox.onchange = taskStatusHandler;
 };
